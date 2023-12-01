@@ -3,30 +3,23 @@ import { Category, Header } from "../components/layout";
 import Hamburger from "../components/button/Hamburger";
 import Button from "../components/button/Button";
 import axios from "axios";
-// import CreateItem from "./CreateItem";
 
 const Shop = () => {
   const [hamburgerClick, setHamburgerClick] = useState(false);
   const hamburgerOnClick = () => {
     setHamburgerClick(!hamburgerClick);
   };
-  const [shopItems, setshopItems] = useState([]);
+  const [shopItems, setShopItems] = useState([]);
   const ListHandler = async () => {
     const { data: shopList } = await axios.get(
       "http://localhost:4000/shop/list"
     );
-    setshopItems(shopList);
+    setShopItems(shopList);
   };
 
   useEffect(() => {
     ListHandler();
   }, []);
-
-  // let tempItem = [
-  //   // { num: 10, name: "이쁜 셔츠" },
-  //   // { num: 20, name: "빈티지 바지" },
-  //   // { num: 30, name: "벙거지 모자" },
-  // ];
 
   const template = () => {
     return (

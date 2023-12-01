@@ -35,3 +35,41 @@ exports.shopRegist = async (item, count, content) => {
     return shopSuccess;
   } catch (e) {}
 };
+
+exports.shopUpdate = async (id, item, count, content) => {
+  try {
+    const [uid] = await db.Shop.update({
+      Shop_title: item,
+      Shop_content: content,
+      Shop_count: count,
+    }, {
+      where: {
+        Shop_uid: id
+      }
+    });
+
+
+    if(uid === 1){
+      const { dataValues: shopItem } = await db.Shop.findOne({
+        where: {
+          Shop_uid: id,
+        },
+      });
+
+      return shopItem;
+    }
+
+  } catch (e) {}
+}
+
+exports.shopDelete = async (id) => {
+  try {
+    const { dataValues: shopSuccess } = await db.Shop.destroy({
+      where: {
+        Shop_uid: id
+      }
+    });
+
+    return shopSuccess;
+  } catch (e) {}
+}

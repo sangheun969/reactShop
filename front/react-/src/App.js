@@ -1,7 +1,7 @@
 import "./App.css";
 
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Main, Shop, MyPage, Login, Detail, Signup, CreateItem } from "./pages";
+import { Main, Shop, MyPage, Login, Detail, Signup, CreateItem, UpdateItem } from "./pages";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
         <Route path="/" element={<Main login={login} />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/create" element={<CreateItem />} />
+        <Route path="/update/:id" element={<UpdateItem />} />
         <Route path="/mypage" element={<Redirect />} />
         <Route
           path="/login"

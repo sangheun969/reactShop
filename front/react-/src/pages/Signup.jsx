@@ -21,7 +21,7 @@ const Signup = () => {
     const inputId = e.target.id.value;
     const inputPassword = e.target.pw.value;
 
-    const response = await axios.post("https://localhost:4000/users", {
+    const response = await axios.post("http://localhost:4000/users", {
       id: inputId,
       pw: inputPassword,
     });
