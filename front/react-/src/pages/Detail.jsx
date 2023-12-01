@@ -21,6 +21,7 @@ const Detail = () => {
     const { data: userItem } = await axios.get(
       `http://localhost:4000/shop/${params.id}`
     );
+    console.log(userItem);
     setShopItem(userItem);
   };
 

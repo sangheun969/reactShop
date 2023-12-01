@@ -118,3 +118,17 @@
   background-color: #dadada;
   color: white;
 }
+
+.mainItems {
+  border: 1px solid black;
+  margin: 0 auto;
+  width: 90%;
+  height: 900px;
+}
+
+.userItemsWrap {
+  border: 1px solid black;
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+}
