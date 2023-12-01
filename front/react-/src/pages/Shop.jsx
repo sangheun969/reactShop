@@ -45,14 +45,19 @@ const Shop = () => {
         children={template()}
       ></Hamburger>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+      <div
+        className="mainItems"
+        style={{ display: "flex", flexDirection: "column", gap: "8px" }}
+      >
         {shopItems.map((i, index) => {
           return (
-            <div key={index}>
-              <Category
-                pageName={i.Shop_title}
-                path={`/detail/${i.Shop_uid}`}
-              />
+            <div className="userItemsWrap">
+              <div key={index} className="userItem">
+                <Category
+                  pageName={i.Shop_title}
+                  path={`/detail/${i.Shop_uid}`}
+                />
+              </div>
             </div>
           );
         })}
