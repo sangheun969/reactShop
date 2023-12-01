@@ -1,0 +1,46 @@
+npm ERR! Missing script: "server.js"
+npm ERR! 
+npm ERR! To see a list of scripts, run:
+npm ERR!   npm run
+
+npm ERR! A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2023-11-30T07_54_12_442Z-debug-0.log
+node:internal/modules/cjs/loader:1051
+  throw err;
+  ^
+
+Error: Cannot find module '/home/ubuntu/19-2.homework/back/run'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1048:15)
+    at Module._load (node:internal/modules/cjs/loader:901:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)
+    at node:internal/main/run_main_module:23:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v20.8.0
+Executing (default): DROP TABLE IF EXISTS `Users`;
+Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'Users' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='practice' AND REFERENCED_TABLE_NAME IS NOT NULL;
+Executing (default): DROP TABLE IF EXISTS `Users`;
+Executing (default): DROP TABLE IF EXISTS `Users`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`Users_uid` INTEGER NOT NULL auto_increment , `Users_id` VARCHAR(255) NOT NULL, `Users_password` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`Users_uid`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `Users`
+BackEnd Server Start
+Executing (default): DROP TABLE IF EXISTS `Users`;
+Executing (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'Users' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='practice' AND REFERENCED_TABLE_NAME IS NOT NULL;
+Executing (default): DROP TABLE IF EXISTS `Users`;
+Executing (default): DROP TABLE IF EXISTS `Users`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`Users_uid` INTEGER NOT NULL auto_increment , `Users_id` VARCHAR(255) NOT NULL, `Users_password` VARCHAR(255) NOT NULL, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`Users_uid`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `Users`
+BackEnd Server Start
+Executing (default): INSERT INTO `Users` (`Users_uid`,`Users_id`,`Users_password`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?);
+Executing (default): SELECT `Users_uid`, `Users_id`, `Users_password`, `createdAt`, `updatedAt` FROM `Users` AS `Users` WHERE (`Users`.`Users_id` = '123' AND `Users`.`Users_password` = '123') LIMIT 1;
+Executing (default): INSERT INTO `Users` (`Users_uid`,`Users_id`,`Users_password`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?);
+Executing (default): SELECT `Users_uid`, `Users_id`, `Users_password`, `createdAt`, `updatedAt` FROM `Users` AS `Users` WHERE (`Users`.`Users_id` = 'dom1' AND `Users`.`Users_password` = '123') LIMIT 1;
+Executing (default): SELECT `Users_uid`, `Users_id`, `Users_password`, `createdAt`, `updatedAt` FROM `Users` AS `Users` WHERE (`Users`.`Users_id` = '123' AND `Users`.`Users_password` = '123') LIMIT 1;
+Executing (default): INSERT INTO `Users` (`Users_uid`,`Users_id`,`Users_password`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?);
+Executing (default): INSERT INTO `Users` (`Users_uid`,`Users_id`,`Users_password`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?);
+Executing (default): SELECT `Users_uid`, `Users_id`, `Users_password`, `createdAt`, `updatedAt` FROM `Users` AS `Users` WHERE (`Users`.`Users_id` = 'soon' AND `Users`.`Users_password` = '1234') LIMIT 1;
+Executing (default): INSERT INTO `Users` (`Users_uid`,`Users_id`,`Users_password`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?);
+Executing (default): SELECT `Users_uid`, `Users_id`, `Users_password`, `createdAt`, `updatedAt` FROM `Users` AS `Users` WHERE (`Users`.`Users_id` = '1' AND `Users`.`Users_password` = '1') LIMIT 1;
+Executing (default): INSERT INTO `Users` (`Users_uid`,`Users_id`,`Users_password`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?);
+Executing (default): SELECT `Users_uid`, `Users_id`, `Users_password`, `createdAt`, `updatedAt` FROM `Users` AS `Users` WHERE (`Users`.`Users_id` = '111' AND `Users`.`Users_password` = '111') LIMIT 1;
