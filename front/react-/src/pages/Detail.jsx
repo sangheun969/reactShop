@@ -1,16 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, useParams, useSearchParams } from "react-router-dom";
 
 import { Header, Category } from "../components/layout";
 import axios from "axios";
 import Hamburger from "../components/button/Hamburger";
-import Form from "../components/layout/Form";
+// import Form from "../components/layout/Form";
 
 const Detail = () => {
   const [hamburgerClick, setHamburgerClick] = useState(false);
   const hamburgerOnClick = () => {
     setHamburgerClick(!hamburgerClick);
   };
+  const [shopItem, setShopItem] = useState({});
+  const params = useParams();
+
+  const shopDataList = async () => {
+    const { data: userItem } = await axios.get(
+      `http://localhost:4000/shop/${params.id}`
+    );
+    setShopItem(userItem);
+  };
+  useEffect(() => {
+    shopDataList();
+  }, []);
 
   let tempItem = [
     {
@@ -30,9 +42,9 @@ const Detail = () => {
     },
   ];
 
-  const location = useLocation();
-  const params = useParams();
-  const [query, setQuery] = useSearchParams();
+  // const location = useLocation();
+
+  // const [query, setQuery] = useSearchParams();
 
   const template = () => {
     return <Category pageName={"메인"} path={"/"} />;
@@ -46,13 +58,11 @@ const Detail = () => {
         onClick={hamburgerOnClick}
         children={template()}
       ></Hamburger>
-      <div>{tempItem[params.id].num}개</div>
-      <div>{tempItem[params.id].name}</div>
+      <div>{shopItem.Shop_count}개</div>
+      <div>{shopItem.Shop_title}</div>
+
       <div>
-        <img
-          style={{ width: "800px", height: "800px" }}
-          src={tempItem[params.id].img}
-        />
+        <div>{shopItem.Shop_content}</div>
       </div>
     </>
   );

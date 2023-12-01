@@ -1,7 +1,7 @@
 import "./App.css";
 
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Main, Shop, MyPage, Login, Detail, Signup } from "./pages";
+import { Main, Shop, MyPage, Login, Detail, Signup, CreateItem } from "./pages";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main login={login} />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/create" element={<CreateItem />} />
         <Route path="/mypage" element={<Redirect />} />
         <Route
           path="/login"
@@ -32,7 +33,7 @@ function App() {
           }
         />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/detail/:id/:num/:name" element={<Detail />} />
+        <Route path="/detail/:id" element={<Detail />} />
       </Routes>
     </div>
   );

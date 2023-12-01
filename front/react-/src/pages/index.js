@@ -4,5 +4,6 @@ import MyPage from "./MyPage";
 import Shop from "./Shop";
 import Detail from "./Detail";
 import Signup from "./Signup";
+import CreateItem from "./CreateItem";
 
-export { Main, Login, MyPage, Shop, Detail, Signup };
+export { Main, Login, MyPage, Shop, Detail, Signup, CreateItem };
