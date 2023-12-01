@@ -3,7 +3,6 @@ import { Category, Header } from "../components/layout";
 import axios from "axios";
 import Hamburger from "../components/button/Hamburger";
 import Form from "../components/layout/Form";
-
 const Login = ({ login, setLogin, user, setUser }) => {
   const [hamburgerClick, setHamburgerClick] = useState(false);
   const hamburgerOnClick = () => {
@@ -15,11 +14,13 @@ const Login = ({ login, setLogin, user, setUser }) => {
     const inputId = e.target.id.value;
     const inputPassword = e.target.pw.value;
 
-    const { data: response } = await axios.post("https://localhost:4000/login", {
-
-      id: inputId,
-      pw: inputPassword,
-    });
+    const { data: response } = await axios.post(
+      "https://localhost:4000/login",
+      {
+        id: inputId,
+        pw: inputPassword,
+      }
+    );
 
     if (response === "") {
       setLogin(false);
