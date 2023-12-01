@@ -9,6 +9,6 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./react-/build/index.html"));
 });
 
-app.listen("10000", () => {
+app.listen("3000", () => {
   console.log("FrontEnd Server Start");
 });

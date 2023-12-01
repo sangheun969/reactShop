@@ -15,7 +15,7 @@ const Login = ({ login, setLogin, user, setUser }) => {
     const inputId = e.target.id.value;
     const inputPassword = e.target.pw.value;
 
-    const { data: response } = await axios.post("https://api-homework.hyunjun.kr/login", {
+    const { data: response } = await axios.post("https://localhost:4000/login", {
 
       id: inputId,
       pw: inputPassword,

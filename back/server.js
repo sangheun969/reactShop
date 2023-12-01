@@ -14,7 +14,7 @@ app.use((req, res, next) => {
 
 app.use(userRouter);
 
-app.listen(11000, async () => {
+app.listen(4000, async () => {
   await db.sequelize.sync({ force: true });
 
   console.log("BackEnd Server Start");
